@@ -10,7 +10,7 @@
 
 BluetoothSerial SerialBT;
 
-String IdKamar = "1.E";
+String IdKamar = "1.D";
 
 int eeAddress = 0; // eeprom eddress
 #define EEPROM_SIZE 12
@@ -62,7 +62,7 @@ void setup()
   lcd.print("Kamar : " + IdKamar);
   // relaysetup
   pinMode(relayPinOut, OUTPUT);
-  digitalWrite(relayPinOut, LOW);
+  digitalWrite(relayPinOut, HIGH);
 
   startMillis = millis();
 
@@ -142,11 +142,11 @@ void loop()
   if (token_remaining2 <= 0)
   {
     pzem.resetEnergy();
-    digitalWrite(relayPinOut, HIGH);
+    digitalWrite(relayPinOut, LOW);
   }
   else
   {
-    digitalWrite(relayPinOut, LOW);
+    digitalWrite(relayPinOut, HIGH);
   }
   // bluetoothKey();
 }
