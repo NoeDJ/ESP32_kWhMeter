@@ -10,7 +10,7 @@
 
 BluetoothSerial SerialBT;
 
-String IdKamar = "1.D";
+String IdKamar = "1.G";
 
 int eeAddress = 0; // eeprom eddress
 #define EEPROM_SIZE 12
